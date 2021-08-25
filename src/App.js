@@ -1,10 +1,9 @@
 import React from "react"
-import ReactDOM from "react-dom"
 
-
-//import Comp1 from "./Comp1"
-import Comp2 from "./Comp2"
+import TodoList from "./TodoList"
 import "./mystyle.css"
+
+import QuantitySelector from "./quantity/QuantitySelector"
 
 class  App extends React.Component{
 
@@ -29,13 +28,15 @@ class  App extends React.Component{
                     </input>
                     <button type= "submit">Add list</button>
                 </form>
-                <Comp2 
+                <TodoList 
                     entries ={this.state.items}
                     delete = {this.deleteItem}
                 
                 
                 />
-                
+                <div>
+                    <QuantitySelector/>
+                </div>
                 
                 
             </div>

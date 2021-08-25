@@ -1,0 +1,31 @@
+.quantity-input{
+ /*   width: 35vw;
+  height: 10vh; */
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  background: #e2e1e0;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+
+    /* align div to center */
+  margin: auto;
+  width: 90%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+.right{
+    margin-left: 1px;
+}
+.left{
+    margin-right: 2px;
+}
+.qnt-input-box{
+    margin-right: 1px;
+    width: 100px;
+}
