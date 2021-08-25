@@ -1,0 +1,44 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-gap: 20px;
+}
+.grid-child  {
+   background-color: bisque; 
+   padding-right: 40px;
+   
+    
+}
+.purple{
+    color: blueviolet;
+    border: 2px solid blueviolet;
+}
+.green{
+    color: green;
+    border: 2px solid green;
+}
+li{
+    color: #333;
+  background-color: rgba(255,255,255,.5);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  list-style: none;
+}
+
+input{
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid rgb(63, 55, 182);
+    width: 165px;
+}
+
+button{
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+    margin-right: 0px;
+    background-color: #0066FF;
+    color: #FFF;
+    border: 2px solid #0066FF;
+}
