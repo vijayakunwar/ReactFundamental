@@ -4,6 +4,7 @@ import TodoList from "./TodoList"
 import "./mystyle.css"
 
 import QuantitySelector from "./quantity/QuantitySelector"
+import SimpleForm from "./Form/SimpleForm"
 
 class  App extends React.Component{
 
@@ -36,6 +37,10 @@ class  App extends React.Component{
                 />
                 <div>
                     <QuantitySelector/>
+                </div>
+
+                <div>
+                    <SimpleForm/>
                 </div>
                 
                 
