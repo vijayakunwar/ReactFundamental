@@ -1,9 +1,9 @@
 import React from "react"
-import { render } from "react-dom";
+//import { render } from "react-dom";
 import "./mystyle.css"
 
 
-class  Comp2 extends React.Component{
+class  TodoList extends React.Component{
 
     constructor(props){
         super(props)
@@ -36,4 +36,4 @@ class  Comp2 extends React.Component{
 }
 
 
-export default Comp2
+export default TodoList
