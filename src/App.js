@@ -6,6 +6,7 @@ import "./mystyle.css"
 import QuantitySelector from "./quantity/QuantitySelector"
 import SimpleForm from "./Form/SimpleForm"
 import MemeGenerator from "./MemeGenerator/MemeGenerator"
+import RandomMeme from "./MemeGenerator/RandomMeme"
 
 class  App extends React.Component{
 
@@ -37,21 +38,16 @@ class  App extends React.Component{
                 
                 />
                 
-                <div>
-                    <QuantitySelector/>
-                </div>
+                <div><QuantitySelector/></div>
                 <div></div>
                 
-                <div>
-                    <SimpleForm/>
-                </div>
+                <div><SimpleForm/></div>
 
-                
+                <div><RandomMeme/></div>
 
-                <div>
-                    <MemeGenerator/>
-                </div>
-                
+                <div></div>
+
+                <div><MemeGenerator/></div>
                 
             </div>
         )

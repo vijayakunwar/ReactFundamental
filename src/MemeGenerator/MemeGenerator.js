@@ -10,7 +10,9 @@ constructor(){
     this.handleChange =this.handleChange.bind(this)
 }
 handleChange(event){
-    const {type,name,value} = event.target
+
+    
+    const {name,value} = event.target
     //this.setState({[name]:value})
   this.state.imageSelection == ""
   ? 
@@ -24,13 +26,13 @@ render(){
 
     return(
         <div>
-            <h2>MEME GENERATOR</h2>
+            <h2>MEME Generator from local drive image</h2>
             <form>
                 { <input 
                     type="text"
                     name ="memeSentence" 
                     value ={this.state.memeSentence} 
-                    placeholder= "write sentence"
+                    placeholder= "write topsentence"
                     onChange={this.handleChange}
                     
                     ></input> }
@@ -57,10 +59,10 @@ render(){
                                 
                 >
                     <h2 style={{color:"white", fontSize:"40px"}}>{
-                            this.state.memeSentence ==""
+                            /* this.state.memeSentence ==""
                             ? 
                             window.alert("please select image first")
-                            : 
+                            :  */
                             this.state.memeSentence                            
                         }</h2>
 
