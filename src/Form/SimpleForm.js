@@ -21,10 +21,15 @@ class SimpleForm extends Component {
         this.state = {
             firstName: '',
             lastName: '',
-            Age: '',
+            age: '',   //age 
             gender: '',
-            location:'QLD',
-            isDietaryRestriction: false
+            location:'',   // destination
+            isDietaryRestriction: false   //dietaryRestriction
+            /* isDietaryRestriction: {     // how to access nested object checked value
+                isVegan: false,
+                isKosher: false,
+                isLactoseFree: false
+            } */ 
         }
         this.handleChange = this.handleChange.bind(this)
     }
@@ -34,13 +39,14 @@ class SimpleForm extends Component {
            //without using checkbox
           // this.setState({ [name]:value })  
            //after using checkbox need to use this 
-           type === "checkbox"?this.setState({[name]:checked}): this.setState({ [name]:value })  
+          type === "checkbox"?this.setState({[name]:checked}): this.setState({ [name]:value })  
+          //above doesnot work for nested object of dietary restriction
     }
     
     
     render() {
         return (
-            <main>
+            <main> <h2>SIMPLE FORM</h2>
                 <form >
                     <input 
                         name ="firstName"
@@ -60,17 +66,19 @@ class SimpleForm extends Component {
                         placeholder="Age" 
                         name="Age"
                         type="text"
-                        value ={this.state.Age} 
+                        value ={this.state.age} 
                         onChange={this.handleChange} /><br />
                     
                     {/* Create radio buttons for gender here */}
-                    <input
-                        type="radio"
-                        name="gender"
-                        value="male"
-                        checked={this.state.gender ==="male"}
-                        onChange={this.handleChange}
-                    />Male
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="male"
+                            checked={this.state.gender ==="male"} //this radio button is seleted on if this gender is male
+                            onChange={this.handleChange}
+                        />Male
+                    </label>
                     <br />
                     <input
                         type="radio"
@@ -82,21 +90,22 @@ class SimpleForm extends Component {
                     
                     {/* Create select box for location here */}
                     <br />
-                    <label>select the location</label>
-                        <select
-                            value={this.state.lastName}
-                            onChange={this.handleChange}
-                            name ="location"
-                        >
-                            <option value ="QLD">QLD</option>
-                            <option value ="NSW">NSW</option>
-                            <option value ="VIC">VIC</option>
-                            <option value ="TAS">TAS</option>
-                            <option value ="ACT">ACT</option>
-                            <option value ="WA">WA</option>
-                            <option value ="SA">SA</option>
-                            <option value ="NT">NT</option>
-                        </select>
+                   
+                    <select
+                        value={this.state.location}
+                        onChange={this.handleChange}
+                        name ="location"
+                    >
+                        <option value ="">Please select the state</option>
+                        <option value ="QLD">QLD</option> 
+                        <option value ="NSW">NSW</option>
+                        <option value ="VIC">VIC</option>
+                        <option value ="TAS">TAS</option>
+                        <option value ="ACT">ACT</option>
+                        <option value ="WA">WA</option>
+                        <option value ="SA">SA</option>
+                        <option value ="NT">NT</option>
+                    </select>
                     
                     {/* Create check boxes for dietary restrictions here */}
                     <br />
@@ -114,7 +123,7 @@ class SimpleForm extends Component {
                 <hr />
                 <h2>Entered information:</h2>
                 <p>Your name: {this.state.firstName} {this.state.lastName/* First and last name here */}</p>
-                <p>Your age: {this.state.Age/* Age here */}</p>
+                <p>Your age: {this.state.age/* Age here */}</p>
                 <p>Your gender: {this.state.gender/* Gender here */}</p>
                 <p>Your destination: {this.state.location/* Destination here */}</p>
                 <p>
