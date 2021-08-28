@@ -21,10 +21,14 @@ class QuantitySelector extends React.Component{
     
     render(){
         return(
-            <div className ="quantity-input">
-                <button className ="left" onClick={this.decrement}>-</button>
-                <input className="qnt-input-box" value = {this.state.value}></input>
-                <button className="right" onClick={this.increment}>+</button>
+            <div>
+                <div><h2>QNTY selector</h2></div>
+                <div className ="quantity-input">
+                    
+                    <button className ="left" onClick={this.decrement}>-</button>
+                    <input className="qnt-input-box" value = {this.state.value}></input>
+                    <button className="right" onClick={this.increment}>+</button>
+                </div>
             </div>
         )
 

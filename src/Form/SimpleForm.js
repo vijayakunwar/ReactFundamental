@@ -46,7 +46,7 @@ class SimpleForm extends Component {
     
     render() {
         return (
-            <main>
+            <main> <h2>SIMPLE FORM</h2>
                 <form >
                     <input 
                         name ="firstName"
