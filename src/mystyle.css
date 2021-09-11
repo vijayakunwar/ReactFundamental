@@ -2,10 +2,12 @@
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-gap: 20px;
+    background-color: rgb(161, 223, 166); 
 }
 .grid-child  {
    background-color: bisque; 
    padding-right: 40px;
+
    
     
 }
