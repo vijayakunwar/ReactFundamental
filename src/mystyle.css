@@ -1,8 +1,26 @@
-.grid-container{
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-gap: 20px;
-    background-color: rgb(161, 223, 166); 
+.two-column{
+    display: flex;
+   
+}
+.component-list{
+    
+    left: 0px;
+    top: 0px;
+    float: left;    
+    padding: 15px;
+    width: 25%;
+    background-color: darkgray;
+    
+}
+
+.vertical-text{
+    writing-mode: vertical-rl;
+}
+.component-view{
+    
+    float: left;
+    width: 75%;
+    padding-left: 25px;
 }
 .grid-child  {
    background-color: bisque; 
@@ -21,13 +39,21 @@
 }
 li{
     color: #333;
-  background-color: rgba(255,255,255,.5);
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  list-style: none;
+    background-color: rgba(255,255,255,.5);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    list-style: none;
+    
 }
-
+a{
+    text-decoration: none;
+    color: red;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+}
 input{
     padding: 10px;
     font-size: 16px;

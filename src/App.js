@@ -24,22 +24,24 @@ class  App extends React.Component{
 
     render(){
         return(
-            <div className ="grid-container">
-                
-                <div>
-                 <ToDoApp/> 
+            <div className="two-column">
+                <aside className ="component-list">
+                    <ol>
+                        <li className ="vertical-text"><a href ="#" >to do list</a></li>
+                        <li><a href ="#" >simple form</a></li>
+                        <li><a href ="#" >meme from api image</a></li>
+                        <li><a href ="#" >meme from file upload</a></li>
+                    </ol>
+                </aside>
+                <div  className = "component-view">
+                    
+                    <div><ToDoApp/> </div>
+                    <div><QuantitySelector/></div>
+                    <div><SimpleForm/></div>
+                    <div><RandomMeme/></div>
+                    <div><MemeGenerator/></div>
+                    
                 </div>
-                <div><QuantitySelector/></div>
-                <div></div>
-                
-                <div><SimpleForm/></div>
-
-                <div><RandomMeme/></div>
-
-                <div></div>
-
-                <div><MemeGenerator/></div>
-                
             </div>
         )
     }
