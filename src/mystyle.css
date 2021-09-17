@@ -1,44 +1,73 @@
-.two-column{
-    display: flex;
-   
-}
+/*
+    css rule  :  https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
+    fixed sidebar: 
+    auto sidebar: 
+*/
 .component-list{
-    
+    padding: 10px;
+
     left: 0px;
-    top: 0px;
-    float: left;    
-    padding: 15px;
-    width: 25%;
-    background-color: darkgray;
+    z-index: 1; /*stay on top*/
+    top: 0px;  /*staty at top*/
+    width: 250px;
+    height: 100vh; /*height: 100%; */ 
+    position: fixed;
+    overflow-x: hidden;   /*provide scrolling function*/ /*disable horizontal scroll*/
     
+    background-color: rgb(94, 92, 92);
+
+    
+    
+}
+.component-list > ol{
+    margin: 0%;
+    padding: 0%;
 }
 
 .vertical-text{
     writing-mode: vertical-rl;
 }
 .component-view{
-    
-    float: left;
-    width: 75%;
-    padding-left: 25px;
+    text-align: center; 
+    padding: 20px;
+    /*position: relative; */
+    margin-left: 270px; /*same as the width of sidebar*/
 }
-.grid-child  {
-   background-color: bisque; 
-   padding-right: 40px;
+@media (max-width: 800px) {
+    .component-list, .component-view {
+      flex: 100%;
+    }
+  }
 
-   
-    
-}
 .purple{
     color: blueviolet;
     border: 2px solid blueviolet;
 }
-.green{
-    color: green;
-    border: 2px solid green;
+.todo-list{
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #0066FF;
+    text-align: center;
+    
 }
+.todo-list ul{
+   /* display: table; */  /*makes list area equal to character space */
+    margin: 0 auto;
+    padding: 0;
+    
+}
+.todo-list ul li{
+    background-color: antiquewhite;
+    /* display: inline-block;*/  
+    /* display: table;*/
+    
+    text-align: left;
+    margin: 15px;
+
+}
+
 li{
-    color: #333;
+    
     background-color: rgba(255,255,255,.5);
     padding: 15px;
     margin-bottom: 15px;
@@ -46,12 +75,13 @@ li{
     list-style: none;
     
 }
-a{
+.component-list > ol> li> a {
     text-decoration: none;
-    color: red;
+    color: rgb(0, 0, 0);
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    
     
 }
 input{
