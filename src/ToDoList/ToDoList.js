@@ -26,7 +26,7 @@ class  ToDoList extends React.Component{
         var todoEntries = this.props.entries;
         var listItems = todoEntries.map(this.createTasks);
         return(
-            <div className ="grid-child green">
+            <div className ="todo-list ">
                 <ul>
                      {listItems}
                 </ul>
